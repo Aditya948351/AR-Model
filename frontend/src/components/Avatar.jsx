@@ -108,7 +108,8 @@ let setupMode = false;
 
 export function Avatar(props) {
   const { nodes, materials, scene } = useGLTF(
-    "/models/64f1a714fe61576b46f27ca2.glb"
+    "https://models.readyplayer.me/6844278626453fc3adefaa3c.glb"
+    //"https://models.readyplayer.me/684425ba82bf1c08fb1528cc.glb" 
   );
 
   const { message, onMessagePlayed, chat } = useChat();
@@ -306,7 +307,7 @@ export function Avatar(props) {
   }, []);
 
   return (
-    <group {...props} dispose={null} ref={group}>
+    <group {...props} dispose={null} ref={group} position={[0, -1.2, 0]}>
       <primitive object={nodes.Hips} />
       <skinnedMesh
         name="Wolf3D_Body"
